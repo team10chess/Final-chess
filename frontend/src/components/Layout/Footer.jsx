@@ -17,9 +17,9 @@ const Footer = () => {
     <div className="bg-[#000] text-white">
       <div className="md:flex md:justify-between md:items-center sm:px-12 px-4 bg-[#342ac8] py-7">
         <h1 className="lg:text-4xl text-3xl md:mb-0 mb-6 lg:leading-normal font-semibold md:w-2/5">
-          <span className="text-[#56d879]">Subscribe</span> us for get news{" "}
+          <span className="text-[#56d879]">Subscribe</span> for live {" "}
           <br />
-          events and offers
+          tournament updates
         </h1>
         <div>
           <input
@@ -42,8 +42,8 @@ const Footer = () => {
             style={{ filter: "brightness(0) invert(1)" }}
           />
           <br />
-          <p>The home and elements needeed to create beatiful products.</p>
-          <div className="flex items-center mt-[15px]">
+          <p>One stop platform for Chess pairing</p>
+          {/* <div className="flex items-center mt-[15px]">
             <AiFillFacebook size={25} className="cursor-pointer" />
             <AiOutlineTwitter
               size={25}
@@ -57,10 +57,10 @@ const Footer = () => {
               size={25}
               style={{ marginLeft: "15px", cursor: "pointer" }}
             />
-          </div>
+          </div> */}
         </ul>
 
-        <ul className="text-center sm:text-start">
+        {/* <ul className="text-center sm:text-start">
           <h1 className="mb-1 font-semibold">Company</h1>
           {footerProductLinks.map((link,index) => (
             <li key={index}>
@@ -73,9 +73,9 @@ const Footer = () => {
               </Link>
             </li>
           ))}
-        </ul>
+        </ul> */}
 
-        <ul className="text-center sm:text-start">
+        {/* <ul className="text-center sm:text-start">
           <h1 className="mb-1 font-semibold">Shop</h1>
           {footercompanyLinks.map((link,index) => (
             <li key={index}>
@@ -88,9 +88,9 @@ const Footer = () => {
               </Link>
             </li>
           ))}
-        </ul>
+        </ul> */}
 
-        <ul className="text-center sm:text-start">
+        {/* <ul className="text-center sm:text-start">
           <h1 className="mb-1 font-semibold">Support</h1>
           {footerSupportLinks.map((link,index) => (
             <li key={index}>
@@ -103,10 +103,10 @@ const Footer = () => {
               </Link>
             </li>
           ))}
-        </ul>
+        </ul> */}
       </div>
 
-      <div
+      {/* <div
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10
          text-center pt-2 text-gray-400 text-sm pb-8"
       >
@@ -118,7 +118,7 @@ const Footer = () => {
             alt=""
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

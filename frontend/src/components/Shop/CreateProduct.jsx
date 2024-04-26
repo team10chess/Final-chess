@@ -26,7 +26,7 @@ const CreateProduct = () => {
       toast.error(error);
     }
     if (success) {
-      toast.success("Product created successfully!");
+      toast.success("Tournament created successfully!");
       navigate("/dashboard");
       window.location.reload();
     }

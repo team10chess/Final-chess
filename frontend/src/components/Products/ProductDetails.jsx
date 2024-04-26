@@ -61,14 +61,14 @@ const ProductDetails = ({ data }) => {
   const addToCartHandler = (id) => {
     const isItemExists = cart && cart.find((i) => i._id === id);
     if (isItemExists) {
-      toast.error("Item already in cart!");
+      toast.error("You have already joined the tournament!");
     } else {
       if (data.stock < 1) {
-        toast.error("Product stock limited!");
+        toast.error("Participant limit reached!");
       } else {
         const cartData = { ...data, qty: count };
         dispatch(addTocart(cartData));
-        toast.success("Item added to cart successfully!");
+        toast.success("Joined tournament successfully!");
       }
     }
   };
@@ -150,17 +150,17 @@ const ProductDetails = ({ data }) => {
               <div className="w-full 800px:w-[50%] pt-5">
                 <h1 className={`${styles.productTitle}`}>{data.name}</h1>
                 <p>{data.description}</p>
-                <div className="flex pt-3">
-                  <h4 className={`${styles.productDiscountPrice}`}>
+                {/* <div className="flex pt-3"> */}
+                  {/* <h4 className={`${styles.productDiscountPrice}`}>
                     {data.discountPrice}$
-                  </h4>
-                  <h3 className={`${styles.price}`}>
+                  </h4> */}
+                  {/* <h3 className={`${styles.price}`}>
                     {data.originalPrice ? data.originalPrice + "$" : null}
-                  </h3>
-                </div>
+                  </h3> */}
+                {/* </div> */}
 
                 <div className="flex items-center mt-12 justify-between pr-3">
-                  <div>
+                  {/* <div>
                     <button
                       className="bg-gradient-to-r from-teal-400 to-teal-500 text-white font-bold rounded-l px-4 py-2 shadow-lg hover:opacity-75 transition duration-300 ease-in-out"
                       onClick={decrementCount}
@@ -176,8 +176,8 @@ const ProductDetails = ({ data }) => {
                     >
                       +
                     </button>
-                  </div>
-                  <div>
+                  </div> */}
+                  {/* <div>
                     {click ? (
                       <AiFillHeart
                         size={30}
@@ -195,16 +195,16 @@ const ProductDetails = ({ data }) => {
                         title="Add to wishlist"
                       />
                     )}
-                  </div>
+                  </div> */}
                 </div>
-                <div
+                {/* <div
                   className={`${styles.button} !mt-6 !rounded !h-11 flex items-center`}
                   onClick={() => addToCartHandler(data._id)}
                 >
                   <span className="text-white flex items-center">
                     Add to cart <AiOutlineShoppingCart className="ml-1" />
                   </span>
-                </div>
+                </div> */}
                 <div className="flex items-center pt-8">
                   <Link to={`/shop/preview/${data?.shop._id}`}>
                     <img
@@ -219,9 +219,9 @@ const ProductDetails = ({ data }) => {
                         {data.shop.name}
                       </h3>
                     </Link>
-                    <h5 className="pb-3 text-[15px]">
+                    {/* <h5 className="pb-3 text-[15px]">
                       ({averageRating}/5) Ratings
-                    </h5>
+                    </h5> */}
                   </div>
                   <div
                     className={`${styles.button} bg-[#6443d1] mt-4 !rounded !h-11`}
@@ -267,13 +267,13 @@ const ProductDetailsInfo = ({
             }
             onClick={() => setActive(1)}
           >
-            Product Details
+            Tournament Details
           </h5>
           {active === 1 ? (
             <div className={`${styles.active_indicator}`} />
           ) : null}
         </div>
-        <div className="relative">
+        {/* <div className="relative">
           <h5
             className={
               "text-[#000] text-[18px] px-1 leading-5 font-[600] cursor-pointer 800px:text-[20px]"
@@ -285,7 +285,7 @@ const ProductDetailsInfo = ({
           {active === 2 ? (
             <div className={`${styles.active_indicator}`} />
           ) : null}
-        </div>
+        </div> */}
         <div className="relative">
           <h5
             className={
@@ -293,7 +293,7 @@ const ProductDetailsInfo = ({
             }
             onClick={() => setActive(3)}
           >
-            Seller Information
+            Host Information
           </h5>
           {active === 3 ? (
             <div className={`${styles.active_indicator}`} />
@@ -308,34 +308,6 @@ const ProductDetailsInfo = ({
         </>
       ) : null}
 
-      {active === 2 ? (
-        <div className="w-full min-h-[40vh] flex flex-col items-center py-3 overflow-y-scroll">
-          {data &&
-            data.reviews.map((item, index) => (
-              <div className="w-full flex my-2">
-                <img
-                  src={`${item.user.avatar?.url}`}
-                  alt=""
-                  className="w-[50px] h-[50px] rounded-full"
-                />
-                <div className="pl-2 ">
-                  <div className="w-full flex items-center">
-                    <h1 className="font-[500] mr-3">{item.user.name}</h1>
-                    <Ratings rating={data?.ratings} />
-                  </div>
-                  <p>{item.comment}</p>
-                </div>
-              </div>
-            ))}
-
-          <div className="w-full flex justify-center">
-            {data && data.reviews.length === 0 && (
-              <h5>No Reviews have for this product!</h5>
-            )}
-          </div>
-        </div>
-      ) : null}
-
       {active === 3 && (
         <div className="w-full block 800px:flex p-5">
           <div className="w-full 800px:w-[50%]">
@@ -346,12 +318,12 @@ const ProductDetailsInfo = ({
                   className="w-[50px] h-[50px] rounded-full"
                   alt=""
                 />
-                <div className="pl-3">
+                {/* <div className="pl-3">
                   <h3 className={`${styles.shop_name}`}>{data.shop.name}</h3>
                   <h5 className="pb-2 text-[15px]">
                     ({averageRating}/5) Ratings
                   </h5>
-                </div>
+                </div> */}
               </div>
             </Link>
             <p className="pt-2">{data.shop.description}</p>
@@ -365,20 +337,20 @@ const ProductDetailsInfo = ({
                 </span>
               </h5>
               <h5 className="font-[600] pt-3">
-                Total Products:{" "}
+                Number of Tournaments Hosted:{" "}
                 <span className="font-[500]">
                   {products && products.length}
                 </span>
               </h5>
-              <h5 className="font-[600] pt-3">
+              {/* <h5 className="font-[600] pt-3">
                 Total Reviews:{" "}
                 <span className="font-[500]">{totalReviewsLength}</span>
-              </h5>
-              <Link to="/">
+              </h5> */}
+              <Link to={`/shop/preview/${data?.shop._id}`}>
                 <div
                   className={`${styles.button} !rounded-[4px] !h-[39.5px] mt-3`}
                 >
-                  <h4 className="text-white">Visit Shop</h4>
+                  <h4 className="text-white">Visit profile</h4>
                 </div>
               </Link>
             </div>

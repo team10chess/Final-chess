@@ -16,6 +16,7 @@ import { useSelector } from "react-redux";
 import Cart from "../cart/Cart";
 import Wishlist from "../Wishlist/Wishlist";
 import { RxCross1 } from "react-icons/rx";
+// import chesslogo from "../../Assests/chesslogo.svg" ;
 
 const Header = ({ activeHeading }) => {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -58,10 +59,9 @@ const Header = ({ activeHeading }) => {
           <div>
             <Link to="/">
               <img
-                src="https://d365eiv1xdqada.cloudfront.net/h50au8%2Fpreview%2F57519432%2Fmain_large.png?response-content-disposition=inline%3Bfilename%3D%22main_large.png%22%3B&response-content-type=image%2Fpng&Expires=1714135028&Signature=N8KpfO6Vp-oazTG4cFaPeMOO82iNptAkEiGdiADCN9NPWhy~BdPglxhmdNJuvES~aqf3G0Em90PNMqK~W-BYWxErMKZGwfygQwJf6a7HehRyIwCCcB3TrB05jluEZPs-sBqHASRpZv-3M28LGtaTIsW7Z2JrP3GjX8zQUrgf30kSjtvFzkc37Voi1dhCoN-hv9L5j49QA9LIHEuVBn9bNI51fZHNrxLq5qSuWpg~8yR5e1twoIFlyaOTk7v~xpTYcC9xEvEFpar5VQk1qnbilE1q8ZUgby61iDW7ROyrx4ss4sqgs~YI9n1eaHCWuA7oY8~7eDyXb7WJaGp4CNkm2w__&Key-Pair-Id=APKAJT5WQLLEOADKLHBQ"
-                alt=""
-                width = "200"
-                height = "200"
+                src= "https://jmp.sh/sMw6u3Qx"
+                alt="chess logo"
+                
               />
             </Link>
           </div>
@@ -145,7 +145,7 @@ const Header = ({ activeHeading }) => {
           </div>
 
           <div className="flex">
-            <div className={`${styles.noramlFlex}`}>
+            {/* <div className={`${styles.noramlFlex}`}>
               <div
                 className="relative cursor-pointer mr-[15px]"
                 onClick={() => setOpenWishlist(true)}
@@ -170,7 +170,7 @@ const Header = ({ activeHeading }) => {
                   {cart && cart.length}
                 </span>
               </div>
-            </div>
+            </div> */}
 
             <div className={`${styles.noramlFlex}`}>
               <div className="relative cursor-pointer mr-[15px]">

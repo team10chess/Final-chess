@@ -16,7 +16,7 @@ const SuggestedProduct = ({ data }) => {
 
   return (
     <div>
-      {data ? (
+      {/* {data ? (
         <div className={`p-4 ${styles.section}`}>
           <h2
             className={`${styles.heading} text-[25px] font-[500] border-b mb-5`}
@@ -31,7 +31,7 @@ const SuggestedProduct = ({ data }) => {
              }
       </div>
         </div>
-      ) : null}
+      ) : null} */}
     </div>
   );
 };

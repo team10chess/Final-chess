@@ -35,8 +35,8 @@ const Footer = () => {
       <div className="grid grid-cols-1 sm:gird-cols-3 lg:grid-cols-4 gap-6 sm:px-8 px-5 py-16 sm:text-center">
         <ul className="px-5 text-center sm:text-start flex sm:block flex-col items-center">
           <img
-            src="https://shopo.quomodothemes.website/assets/images/logo.svg"
-            alt=""
+            src="chess.svg"
+            alt="chesslogo"
             style={{ filter: "brightness(0) invert(1)" }}
           />
           <br />

@@ -16,7 +16,7 @@ const Sponsored = () => {
         </div>
         <div className="flex items-start">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHoc3ycLGV_5Qg12faEHCnbmx0xsrsGk5qrzdMuFY_Eg&s"
+            src="https://d33i2jw1rbe4t6.cloudfront.net/uploads/company/logo/256/medium_6501d949-f039-4eaf-8f54-dc651187ad5b.png"
             style={{width:"150px", objectFit:"contain"}}
             alt=""
           />

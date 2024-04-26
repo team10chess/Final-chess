@@ -4,18 +4,18 @@ export const navItems = [
       title: "Home",
       url: "/",
     },
+    // {
+    //   title: "Follow Tournaments",
+    //   url: "/best-selling",
+    // },
     {
-      title: "Best Selling",
-      url: "/best-selling",
-    },
-    {
-      title: "Products",
+      title: "Follow Tournaments",
       url: "/products",
     },
-    {
-      title: "Events",
-      url: "/events",
-    },
+    // {
+    //   title: "Events",
+    //   url: "/events",
+    // },
     {
       title: "FAQ",
       url: "/faq",

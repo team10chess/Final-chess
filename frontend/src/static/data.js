@@ -26,8 +26,8 @@ export const navItems = [
   export const brandingData = [
     {
       id: 1,
-      title: "Free Shipping",
-      Description: "From all orders over 100$",
+      title: "Host Tournament",
+      Description: "Deloy your own tournaments",
       icon: (
         <svg
           width="36"
@@ -76,8 +76,8 @@ export const navItems = [
     },
     {
       id: 2,
-      title: "Daily Surprise Offers",
-      Description: "Save up to 25% off",
+      title: "Multiplayer access",
+      Description: "Play anytime with anyone",
       icon: (
         <svg
           width="32"
@@ -104,8 +104,8 @@ export const navItems = [
     },
     {
       id: 4,
-      title: "Affortable Prices",
-      Description: "Get Factory direct price",
+      title: "Easy interface",
+      Description: "Keep connected with all",
       icon: (
         <svg
           width="32"
@@ -151,8 +151,8 @@ export const navItems = [
     },
     {
       id: 5,
-      title: "Secure Payments",
-      Description: "100% protected payments",
+      title: "Transparent system",
+      Description: "100% transparent arena",
       icon: (
         <svg
           width="32"

@@ -34,11 +34,12 @@ const Footer = () => {
       </div>
       <div className="grid grid-cols-1 sm:gird-cols-3 lg:grid-cols-4 gap-6 sm:px-8 px-5 py-16 sm:text-center">
         <ul className="px-5 text-center sm:text-start flex sm:block flex-col items-center">
-          <img
-            src="chess.svg"
+          {/* <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2iDFjglvWFAI3cHI7Ig3XtMnsqGBGvVjqKTKlfyQVGD2kpYg2SSfpzaIve5LBQYEZBeCvZctgWSydSqO5YVM1n0-Lgp5VkUALF47sX7-zDz8dGygUt04ur3PES0DJL5qexdepUGwiGMQUpDxhzzBHceRKfQflrF8H6TOXQHv_OlujQI3cYFodoa2YaKM/s320/Picture1-removebg-preview.png"
             alt="chesslogo"
             style={{ filter: "brightness(0) invert(1)" }}
-          />
+          /> */}
+          <h1>Chess pairing platform</h1>
           <br />
           <p>One stop platform for Chess pairing</p>
         </ul>

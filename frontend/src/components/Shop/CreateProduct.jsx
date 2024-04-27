@@ -82,13 +82,13 @@ const CreateProduct = () => {
 
   return (
     <div className="w-[90%] 800px:w-[50%] bg-white  shadow h-[80vh] rounded-[4px] p-3 overflow-y-scroll">
-      <h5 className="text-[30px] font-Poppins text-center">Create Product</h5>
+      <h5 className="text-[30px] font-Poppins text-center">Create Tournament</h5>
       {/* create product form */}
       <form onSubmit={handleSubmit}>
         <br />
         <div>
           <label className="pb-2">
-            Name <span className="text-red-500">*</span>
+            Tournament Name <span className="text-red-500">*</span>
           </label>
           <input
             type="text"
@@ -148,7 +148,7 @@ const CreateProduct = () => {
           />
         </div>
         <br />
-        <div>
+        {/* <div>
           <label className="pb-2">Original Price</label>
           <input
             type="number"
@@ -158,11 +158,11 @@ const CreateProduct = () => {
             onChange={(e) => setOriginalPrice(e.target.value)}
             placeholder="Enter your product price..."
           />
-        </div>
-        <br />
+        </div> */}
+        {/* <br /> */}
         <div>
           <label className="pb-2">
-            Price (With Discount) <span className="text-red-500">*</span>
+            Rating <span className="text-red-500">*</span>
           </label>
           <input
             type="number"
@@ -176,7 +176,7 @@ const CreateProduct = () => {
         <br />
         <div>
           <label className="pb-2">
-            Product Stock <span className="text-red-500">*</span>
+            Number of players <span className="text-red-500">*</span>
           </label>
           <input
             type="number"

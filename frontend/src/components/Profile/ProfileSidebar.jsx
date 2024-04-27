@@ -7,6 +7,7 @@ import {
   MdOutlinePassword,
   MdOutlineTrackChanges,
 } from "react-icons/md";
+import { SiLichess } from "react-icons/si";
 import { TbAddressBook } from "react-icons/tb";
 import { RxPerson } from "react-icons/rx";
 import { Link, useNavigate } from "react-router-dom";
@@ -49,7 +50,7 @@ const ProfileSidebar = ({ setActive, active }) => {
         className="flex items-center cursor-pointer w-full mb-8"
         onClick={() => setActive(2)}
       >
-        <HiOutlineShoppingBag size={20} color={active === 2 ? "red" : ""} />
+        <SiLichess size={20} color={active === 2 ? "red" : ""} />
         <span
           className={`pl-3 ${
             active === 2 ? "text-[red]" : ""
@@ -58,7 +59,7 @@ const ProfileSidebar = ({ setActive, active }) => {
           My Tournaments
         </span>
       </div>
-      <div
+      {/* <div
         className="flex items-center cursor-pointer w-full mb-8"
         onClick={() => setActive(3)}
       >
@@ -70,16 +71,16 @@ const ProfileSidebar = ({ setActive, active }) => {
         >
           Refunds
         </span>
-      </div>
+      </div> */}
 
       <div
         className="flex items-center cursor-pointer w-full mb-8"
-        onClick={() => setActive(4) || navigate("/inbox")}
+        onClick={() => setActive(3) || navigate("/inbox")}
       >
-        <AiOutlineMessage size={20} color={active === 4 ? "red" : ""} />
+        <AiOutlineMessage size={20} color={active === 3 ? "red" : ""} />
         <span
           className={`pl-3 ${
-            active === 4 ? "text-[red]" : ""
+            active === 3 ? "text-[red]" : ""
           } 800px:block hidden`}
         >
           Inbox
@@ -88,15 +89,15 @@ const ProfileSidebar = ({ setActive, active }) => {
 
       <div
         className="flex items-center cursor-pointer w-full mb-8"
-        onClick={() => setActive(5)}
+        onClick={() => setActive(4)}
       >
-        <MdOutlineTrackChanges size={20} color={active === 5 ? "red" : ""} />
+        <MdOutlineTrackChanges size={20} color={active === 4 ? "red" : ""} />
         <span
           className={`pl-3 ${
-            active === 5 ? "text-[red]" : ""
+            active === 4 ? "text-[red]" : ""
           } 800px:block hidden`}
         >
-          Track Order
+          Live Tournaments
         </span>
       </div>
 
@@ -114,7 +115,7 @@ const ProfileSidebar = ({ setActive, active }) => {
         </span>
       </div>
 
-      <div
+      {/* <div
         className="flex items-center cursor-pointer w-full mb-8"
         onClick={() => setActive(7)}
       >
@@ -126,7 +127,7 @@ const ProfileSidebar = ({ setActive, active }) => {
         >
           Address
         </span>
-      </div>
+      </div> */}
 
       {user && user?.role === "Admin" && (
         <Link to="/admin/dashboard">

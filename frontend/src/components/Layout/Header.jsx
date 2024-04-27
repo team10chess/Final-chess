@@ -16,7 +16,8 @@ import { useSelector } from "react-redux";
 import Cart from "../cart/Cart";
 import Wishlist from "../Wishlist/Wishlist";
 import { RxCross1 } from "react-icons/rx";
-// import chesslogo from "../../Assests/chesslogo.svg" ;
+// import chesslogo from "../../Assests/chesslogo.svg" 
+import { CiBoxList } from "react-icons/ci";
 
 const Header = ({ activeHeading }) => {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -59,9 +60,9 @@ const Header = ({ activeHeading }) => {
           <div>
             <Link to="/">
               <img
-                src= "https://jmp.sh/sMw6u3Qx"
+                src= "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2iDFjglvWFAI3cHI7Ig3XtMnsqGBGvVjqKTKlfyQVGD2kpYg2SSfpzaIve5LBQYEZBeCvZctgWSydSqO5YVM1n0-Lgp5VkUALF47sX7-zDz8dGygUt04ur3PES0DJL5qexdepUGwiGMQUpDxhzzBHceRKfQflrF8H6TOXQHv_OlujQI3cYFodoa2YaKM/s320/Picture1-removebg-preview.png"
                 alt="chess logo"
-                
+                style={{height: "100px"}}
               />
             </Link>
           </div>
@@ -120,7 +121,7 @@ const Header = ({ activeHeading }) => {
           {/* categories */}
           <div onClick={() => setDropDown(!dropDown)}>
             <div className="relative h-[60px] mt-[10px] w-[270px] hidden 1000px:block">
-              <BiMenuAltLeft size={30} className="absolute top-3 left-2" />
+              <CiBoxList size={30} className="absolute top-3.5 left-2" />
               <button
                 className={`h-[100%] w-full flex justify-between items-center pl-10 bg-white font-sans text-lg font-[500] select-none rounded-t-md`}
               >

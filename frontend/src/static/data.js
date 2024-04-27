@@ -194,28 +194,28 @@ export const navItems = [
       title: "Swiss Pairing",
       subTitle: "",
       image_Url:
-        "https://cdn.shopify.com/s/files/1/1706/9177/products/NEWAppleMacbookProwithM1ProChip14InchLaptop2021ModelMKGQ3LL_A_16GB_1TBSSD_custommacbd.jpg?v=1659592838",
+        "https://png.pngtree.com/png-vector/20190726/ourmid/pngtree-chess-icon-for-your-project-png-image_1597858.jpg",
     },
     {
       id: 2,
       title: "Round Robin",
       subTitle: "",
       image_Url:
-        "https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2021-07/kosme1.png",
+        "https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/512x512/plain/chess_piece_rook.png",
     },
     {
       id: 3,
       title: "Knockout System",
       subTitle: "",
       image_Url:
-        "https://img.freepik.com/free-vector/ordering-goods-online-internet-store-online-shopping-niche-e-commerce-website-mother-buying-babies-clothes-footwear-toys-infant-accessories_335657-2345.jpg?w=2000",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoarTSIbLBR-AhYaMxqsiAtbvKp2s99A-mIYISjLsePA&s",
     },
     {
       id: 4,
       title: "Others",
       subTitle: "",
       image_Url:
-        "https://searchspring.com/wp-content/uploads/2022/10/Hero-Image-Platform-Others-2.png",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgfTV-ueiT98QvmzjKRLSUXrXzyf4oh970ZCrarbnQTg&s",
     },
   ];
   

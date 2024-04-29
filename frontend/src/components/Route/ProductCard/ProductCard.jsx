@@ -48,7 +48,7 @@ const ProductCard = ({ data,isEvent }) => {
   const addToCartHandler = (id) => {
     const isItemExists = cart && cart.find((i) => i._id === id);
     if (isItemExists) {
-      toast.error("Already joined tournament");
+      // toast.error("Already joined tournament");
     } else {
       if (data.stock < 1) {
         toast.error("Participant limit reached!");
@@ -59,6 +59,8 @@ const ProductCard = ({ data,isEvent }) => {
       }
     }
   };
+
+  console.log(data)
 
   return (
     <>
@@ -89,9 +91,10 @@ const ProductCard = ({ data,isEvent }) => {
 
         <Link to="/checkout">
                 <div
-                  className={`${styles.button} !rounded-[4px] !h-[39.5px] mt-3`}
+                  className={`${styles.button} !rounded-[4px] !h-[39.5px] mt-3`}  
                 >
-                  <h4 className="text-white">Join Tournament</h4>
+                  
+                  <h4 className="text-white" onClick={addToCartHandler(data?._id)}>Join Tournament</h4>
                 </div>
         </Link>
       </div>

@@ -14,8 +14,11 @@ const DashboardHeader = () => {
       <div>
         <Link to="/dashboard">
           <img
-            src="https://shopo.quomodothemes.website/assets/images/logo.svg" //Logo to be changed
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2iDFjglvWFAI3cHI7Ig3XtMnsqGBGvVjqKTKlfyQVGD2kpYg2SSfpzaIve5LBQYEZBeCvZctgWSydSqO5YVM1n0-Lgp5VkUALF47sX7-zDz8dGygUt04ur3PES0DJL5qexdepUGwiGMQUpDxhzzBHceRKfQflrF8H6TOXQHv_OlujQI3cYFodoa2YaKM/s320/Picture1-removebg-preview.png" //Logo to be changed
             alt=""
+            style={{height: "100px"}}
+            
+
           />
         </Link>
       </div>

@@ -60,7 +60,7 @@ const Header = ({ activeHeading }) => {
           <div>
             <Link to="/">
               <img
-                src= "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2iDFjglvWFAI3cHI7Ig3XtMnsqGBGvVjqKTKlfyQVGD2kpYg2SSfpzaIve5LBQYEZBeCvZctgWSydSqO5YVM1n0-Lgp5VkUALF47sX7-zDz8dGygUt04ur3PES0DJL5qexdepUGwiGMQUpDxhzzBHceRKfQflrF8H6TOXQHv_OlujQI3cYFodoa2YaKM/s320/Picture1-removebg-preview.png"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2iDFjglvWFAI3cHI7Ig3XtMnsqGBGvVjqKTKlfyQVGD2kpYg2SSfpzaIve5LBQYEZBeCvZctgWSydSqO5YVM1n0-Lgp5VkUALF47sX7-zDz8dGygUt04ur3PES0DJL5qexdepUGwiGMQUpDxhzzBHceRKfQflrF8H6TOXQHv_OlujQI3cYFodoa2YaKM/s320/Picture1-removebg-preview.png"
                 alt="chess logo"
                 style={{height: "100px"}}
               />
@@ -146,7 +146,7 @@ const Header = ({ activeHeading }) => {
           </div>
 
           <div className="flex">
-            {/* <div className={`${styles.noramlFlex}`}>
+            <div className={`${styles.noramlFlex}`}>
               <div
                 className="relative cursor-pointer mr-[15px]"
                 onClick={() => setOpenWishlist(true)}
@@ -171,7 +171,7 @@ const Header = ({ activeHeading }) => {
                   {cart && cart.length}
                 </span>
               </div>
-            </div> */}
+            </div>
 
             <div className={`${styles.noramlFlex}`}>
               <div className="relative cursor-pointer mr-[15px]">
@@ -220,7 +220,7 @@ const Header = ({ activeHeading }) => {
           <div>
             <Link to="/">
               <img
-                src="https://shopo.quomodothemes.website/assets/images/logo.svg"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2iDFjglvWFAI3cHI7Ig3XtMnsqGBGvVjqKTKlfyQVGD2kpYg2SSfpzaIve5LBQYEZBeCvZctgWSydSqO5YVM1n0-Lgp5VkUALF47sX7-zDz8dGygUt04ur3PES0DJL5qexdepUGwiGMQUpDxhzzBHceRKfQflrF8H6TOXQHv_OlujQI3cYFodoa2YaKM/s320/Picture1-removebg-preview.png"
                 alt=""
                 className="mt-3 cursor-pointer"
               />
@@ -304,7 +304,7 @@ const Header = ({ activeHeading }) => {
               <div className={`${styles.button} ml-4 !rounded-[4px]`}>
                 <Link to="/shop-create">
                   <h1 className="text-[#fff] flex items-center">
-                    Become Seller <IoIosArrowForward className="ml-1" />
+                    Become an organizer <IoIosArrowForward className="ml-1" />
                   </h1>
                 </Link>
               </div>

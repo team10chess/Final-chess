@@ -14,8 +14,8 @@ const AdminHeader = () => {
       <div>
         <Link to="/">
           <img
-            src="https://shopo.quomodothemes.website/assets/images/logo.svg"
-            alt=""
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2iDFjglvWFAI3cHI7Ig3XtMnsqGBGvVjqKTKlfyQVGD2kpYg2SSfpzaIve5LBQYEZBeCvZctgWSydSqO5YVM1n0-Lgp5VkUALF47sX7-zDz8dGygUt04ur3PES0DJL5qexdepUGwiGMQUpDxhzzBHceRKfQflrF8H6TOXQHv_OlujQI3cYFodoa2YaKM/s320/Picture1-removebg-preview.png"
+            alt="chess logo"
           />
         </Link>
       </div>

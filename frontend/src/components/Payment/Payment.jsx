@@ -29,6 +29,8 @@ const Payment = () => {
     setOrderData(orderData);
   }, []);
 
+var id;
+
   const createOrder = (data, actions) => {
     return actions.order
       .create({
@@ -47,6 +49,8 @@ const Payment = () => {
         },
       })
       .then((orderID) => {
+        id=orderID;
+        console.log(id)
         return orderID;
       });
   };
@@ -87,7 +91,7 @@ const Payment = () => {
       .post(`${server}/order/create-order`, order, config)
       .then((res) => {
         setOpen(false);
-        navigate("/order/success");
+        navigate("/order/success", {state:{dataid:'abcd'}});
         toast.success("Order successful!");
         localStorage.setItem("cartItems", JSON.stringify([]));
         localStorage.setItem("latestOrder", JSON.stringify([]));

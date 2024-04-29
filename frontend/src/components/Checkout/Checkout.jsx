@@ -7,8 +7,9 @@ import { useEffect } from "react";
 import axios from "axios";
 import { server } from "../../server";
 import { toast } from "react-toastify";
+import { useParams, useLocation } from "react-router-dom";
 
-const Checkout = () => {
+const Checkout = (props) => {
   const { user } = useSelector((state) => state.user);
   const { cart } = useSelector((state) => state.cart);
   const [country, setCountry] = useState("");

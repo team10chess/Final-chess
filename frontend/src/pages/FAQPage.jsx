@@ -36,7 +36,7 @@ const Faq = () => {
             onClick={() => toggleTab(2)}
           >
             <span className="text-lg font-medium text-gray-900">
-              What is your return policy?
+              How can I register for the tournament?
             </span>
             {activeTab === 2 ? (
               <svg
@@ -71,10 +71,9 @@ const Faq = () => {
           {activeTab === 2 && (
             <div className="mt-4">
               <p className="text-base text-gray-500">
-                If you're not satisfied with your purchase, we accept returns
-                within 30 days of delivery. To initiate a return, please email
-                us at support@myecommercestore.com with your order number and a
-                brief explanation of why you're returning the item.
+                First, after looking for the tournament you want to join, 
+                click on the join option given below the tournament details, 
+                enter your details, and you are good to go.
               </p>
             </div>
           )}
@@ -86,7 +85,7 @@ const Faq = () => {
             onClick={() => toggleTab(3)}
           >
             <span className="text-lg font-medium text-gray-900">
-              How do I track my order?
+              Is there a registration fee, and how can I pay it?
             </span>
             {activeTab === 3 ? (
               <svg
@@ -121,9 +120,9 @@ const Faq = () => {
           {activeTab === 3 && (
             <div className="mt-4">
               <p className="text-base text-gray-500">
-                You can track your order by clicking the tracking link in your
-                shipping confirmation email, or by logging into your account on
-                our website and viewing the order details.
+                There is no registration fee to join the tournament.
+                If there is a registration fee, it is personally taken care by the organizer
+                and has nothing to do with Chess24x7.
               </p>
             </div>
           )}
@@ -135,7 +134,7 @@ const Faq = () => {
             onClick={() => toggleTab(4)}
           >
             <span className="text-lg font-medium text-gray-900">
-              How do I contact customer support?
+              How do I contact the organisers if I have questions or concerns?
             </span>
             {activeTab === 4 ? (
               <svg
@@ -170,9 +169,9 @@ const Faq = () => {
           {activeTab === 4 && (
             <div className="mt-4">
               <p className="text-base text-gray-500">
-                You can contact our customer support team by emailing us at
-                support@myecommercestore.com, or by calling us at (555) 123-4567
-                between the hours of 9am and 5pm EST, Monday through Friday.
+                Below the details of the tournament you wish to join , you must click on host details 
+                and there you will find an option to send direct messages
+                or email the organizer.
               </p>
             </div>
           )}
@@ -184,7 +183,7 @@ const Faq = () => {
             onClick={() => toggleTab(5)}
           >
             <span className="text-lg font-medium text-gray-900">
-              Can I change or cancel my order?
+              Can I withdraw from the tournament, and if so, what is the refund policy?
             </span>
             {activeTab === 5 ? (
               <svg
@@ -219,10 +218,10 @@ const Faq = () => {
           {activeTab === 5 && (
             <div className="mt-4">
               <p className="text-base text-gray-500">
-                Unfortunately, once an order has been placed, we are not able to
-                make changes or cancellations. If you no longer want the items
-                you've ordered, you can return them for a refund within 30 days
-                of delivery.
+                Unfortunately, a player cannot withdraw from the tournament 
+                once he/she joins. Refund details must be personally 
+                communicated with the organizer of the tournament, if the 
+                registration fees are charged.
               </p>
             </div>
           )}
@@ -234,7 +233,7 @@ const Faq = () => {
             onClick={() => toggleTab(6)}
           >
             <span className="text-lg font-medium text-gray-900">
-              Do you offer international shipping?
+              Will the tournament follow a Swiss-system pairing or any other format?
             </span>
             {activeTab === 6 ? (
               <svg
@@ -269,7 +268,10 @@ const Faq = () => {
           {activeTab === 6 && (
             <div className="mt-4">
               <p className="text-base text-gray-500">
-                Currently, we only offer shipping within the United States.
+                Chess24x7 provides multiples pairing options which
+                includes Swiss-pairing, Knock-out, Round robin and custom.
+                So, it depends on the organisers, what type of pairing system
+                they wish to use.
               </p>
             </div>
           )}
@@ -281,7 +283,7 @@ const Faq = () => {
             onClick={() => toggleTab(7)}
           >
             <span className="text-lg font-medium text-gray-900">
-              What payment methods do you accept?
+              What is the tie-break system used in case of equal scores?
             </span>
             {activeTab === 7 ? (
               <svg
@@ -316,8 +318,8 @@ const Faq = () => {
           {activeTab === 7 && (
             <div className="mt-4">
               <p className="text-base text-gray-500">
-                We accept visa,mastercard,paypal payment method also we have
-                cash on delivery system.
+                The tie-break system in case of equal scores will be as per the
+                FIDE rule book.
               </p>
             </div>
           )}

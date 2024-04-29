@@ -102,7 +102,6 @@ const AllProducts = () => {
         sold: item?.sold_out,
       });
     });
-
   return (
     <>
       {isLoading ? (

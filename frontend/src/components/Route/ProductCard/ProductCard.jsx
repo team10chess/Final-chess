@@ -93,7 +93,7 @@ const ProductCard = ({ data,isEvent }) => {
                 <div
                   className={`${styles.button} !rounded-[4px] !h-[39.5px] mt-3`}  
                 >
-                  
+
                   <h4 className="text-white" onClick={addToCartHandler(data?._id)}>Join Tournament</h4>
                 </div>
         </Link>

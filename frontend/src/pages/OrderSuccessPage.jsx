@@ -3,7 +3,7 @@ import Footer from "../components/Layout/Footer";
 import Header from "../components/Layout/Header";
 import Lottie from "react-lottie";
 import animationData from "../Assests/animations/107043-success.json";
-import {useLocation} from 'react-router-dom';
+import {useLocation, useNavigate} from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 
 const OrderSuccessPage = (props) => {
@@ -19,6 +19,14 @@ const OrderSuccessPage = (props) => {
 };
 
 const Success = () => {
+  const navigate = useNavigate();
+
+  const handleClick=()=>{
+    setTimeout(()=>{
+      navigate('/button')
+    }, 5000)
+  }
+
   const defaultOptions = {
     loop: false,
     autoplay: true,
@@ -35,6 +43,7 @@ const Success = () => {
       </h5>
       <br />
       <br />
+      <button onClick={handleClick()}></button>
     </div>
   );
 };

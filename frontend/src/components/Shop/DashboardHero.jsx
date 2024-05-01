@@ -23,22 +23,22 @@ const DashboardHero = () => {
   const availableBalance = seller?.availableBalance.toFixed(2);
 
   const columns = [
-    { field: "id", headerName: "Order ID", minWidth: 150, flex: 0.7 },
+    { field: "id", headerName: "Player join ID", minWidth: 150, flex: 0.7 },
 
-    {
-      field: "status",
-      headerName: "Status",
-      minWidth: 130,
-      flex: 0.7,
-      cellClassName: (params) => {
-        return params.getValue(params.id, "status") === "Delivered"
-          ? "greenColor"
-          : "redColor";
-      },
-    },
+    // {
+    //   field: "status",
+    //   headerName: "Status",
+    //   minWidth: 130,
+    //   flex: 0.7,
+    //   cellClassName: (params) => {
+    //     return params.getValue(params.id, "status") === "Delivered"
+    //       ? "greenColor"
+    //       : "redColor";
+    //   },
+    // },
     {
       field: "itemsQty",
-      headerName: "Items Qty",
+      headerName: "Time of joining",
       type: "number",
       minWidth: 130,
       flex: 0.7,
@@ -46,7 +46,7 @@ const DashboardHero = () => {
 
     {
       field: "total",
-      headerName: "Total",
+      headerName: "Date of joining",
       type: "number",
       minWidth: 130,
       flex: 0.8,
@@ -60,15 +60,15 @@ const DashboardHero = () => {
       type: "number",
       sortable: false,
       renderCell: (params) => {
-        return (
+        return (  
           <>
-            <Link to={`/dashboard/order/${params.id}`}>
+            <Link to={`/order/${params.id}`}>
               <Button>
                 <AiOutlineArrowRight size={20} />
               </Button>
             </Link>
           </>
-        );
+        );  
       },
     },
   ];
@@ -78,9 +78,9 @@ const DashboardHero = () => {
   orders && orders.forEach((item) => {
     row.push({
         id: item._id,
-        itemsQty: item.cart.reduce((acc, item) => acc + item.qty, 0),
-        total: "US$ " + item.totalPrice,
-        status: item.status,
+        itemsQty: new Date(item.createdAt).toLocaleTimeString(),
+        total: new Date(item.createdAt).toLocaleDateString(),
+        // status: item.status,
       });
   });
   return (
@@ -107,9 +107,9 @@ const DashboardHero = () => {
           </Link>
         </div> */}
 
-        <div className="w-full mb-4 800px:w-[30%] min-h-[20vh] bg-white shadow rounded px-2 py-5">
+        <div className="w-full mb-4 800px:w-[45%] min-h-[20vh] bg-white shadow rounded px-2 py-5">
           <div className="flex items-center">
-            <MdBorderClear size={30} className="mr-2" fill="#00000085" />
+            {/* <MdBorderClear size={30} className="mr-2" fill="#00000085" /> */}
             <h3
               className={`${styles.productTitle} !text-[18px] leading-5 !font-[400] text-[#00000085]`}
             >
@@ -122,13 +122,13 @@ const DashboardHero = () => {
           </Link>
         </div>
 
-        <div className="w-full mb-4 800px:w-[30%] min-h-[20vh] bg-white shadow rounded px-2 py-5">
+        <div className="w-full mb-4 800px:w-[45%] min-h-[20vh] bg-white shadow rounded px-2 py-5">
           <div className="flex items-center">
-            <AiOutlineMoneyCollect
+            {/* <AiOutlineMoneyCollect
               size={30}
               className="mr-2"
               fill="#00000085"
-            />
+            /> */}
             <h3
               className={`${styles.productTitle} !text-[18px] leading-5 !font-[400] text-[#00000085]`}
             >
@@ -142,7 +142,7 @@ const DashboardHero = () => {
         </div>
       </div>
       <br />
-      <h3 className="text-[22px] font-Poppins pb-2">Latest Orders</h3>
+      <h3 className="text-[22px] font-Poppins pb-2">Players joining</h3>
       <div className="w-full min-h-[45vh] bg-white rounded">
       <DataGrid
         rows={row}

@@ -70,12 +70,12 @@ const CreateProduct = () => {
         name,
         description,
         category,
-        tags,
-        originalPrice,
-        discountPrice,
+        // tags,
+        // originalPrice,
+        // discountPrice,
         stock,
         shopId: seller._id,
-        images,
+        // images,
       })
     );
   };
@@ -188,7 +188,7 @@ const CreateProduct = () => {
         </div>
         <br />
         <div>
-          <label className="pb-2">
+          {/* <label className="pb-2">
             Upload Images <span className="text-red-500">*</span>
           </label>
           <input
@@ -198,8 +198,8 @@ const CreateProduct = () => {
             className="hidden"
             multiple
             onChange={handleImageChange}
-          />
-          <div className="w-full flex items-center flex-wrap">
+          /> */}
+          {/* <div className="w-full flex items-center flex-wrap">
             <label htmlFor="upload">
               <AiOutlinePlusCircle size={30} className="mt-3" color="#555" />
             </label>
@@ -212,7 +212,7 @@ const CreateProduct = () => {
                   className="h-[120px] w-[120px] object-cover m-2"
                 />
               ))}
-          </div>
+          </div> */}
           <br />
           <div>
             <input

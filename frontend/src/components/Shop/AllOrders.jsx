@@ -18,22 +18,22 @@ const AllOrders = () => {
   }, [dispatch]);
 
   const columns = [
-    { field: "id", headerName: "Order ID", minWidth: 150, flex: 0.7 },
+    { field: "id", headerName: "Player join ID", minWidth: 150, flex: 0.7 },
 
-    {
-      field: "status",
-      headerName: "Status",
-      minWidth: 130,
-      flex: 0.7,
-      cellClassName: (params) => {
-        return params.getValue(params.id, "status") === "Delivered"
-          ? "greenColor"
-          : "redColor";
-      },
-    },
+    // {
+    //   field: "status",
+    //   headerName: "Status",
+    //   minWidth: 130,
+    //   flex: 0.7,
+    //   cellClassName: (params) => {
+    //     return params.getValue(params.id, "status") === "Delivered"
+    //       ? "greenColor"
+    //       : "redColor";
+    //   },
+    // },
     {
       field: "itemsQty",
-      headerName: "Items Qty",
+      headerName: "Time of joining",
       type: "number",
       minWidth: 130,
       flex: 0.7,
@@ -41,7 +41,7 @@ const AllOrders = () => {
 
     {
       field: "total",
-      headerName: "Total",
+      headerName: "Date of joining",
       type: "number",
       minWidth: 130,
       flex: 0.8,
@@ -74,9 +74,9 @@ const AllOrders = () => {
     orders.forEach((item) => {
       row.push({
         id: item._id,
-        itemsQty: item.cart.length,
-        total: "US$ " + item.totalPrice,
-        status: item.status,
+        itemsQty: new Date(item.createdAt).toLocaleTimeString(),
+        total:  new Date(item.createdAt).toLocaleDateString(),
+        // status: item.status,
       });
     });
 

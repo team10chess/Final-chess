@@ -23,7 +23,7 @@ const Success = () => {
 
   const handleClick=()=>{
     setTimeout(()=>{
-      navigate('/button')
+      navigate('/')
     }, 5000)
   }
 

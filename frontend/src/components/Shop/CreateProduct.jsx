@@ -12,17 +12,18 @@ const CreateProduct = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const [images, setImages] = useState([]);
+  const [images, setImages] = useState(['https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg']);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
-  const [tags, setTags] = useState("");
-  const [originalPrice, setOriginalPrice] = useState();
-  const [discountPrice, setDiscountPrice] = useState();
+  const [tags, setTags] = useState("xyz");
+  const [originalPrice, setOriginalPrice] = useState(34.7);
+  const [discountPrice, setDiscountPrice] = useState(12);
   const [stock, setStock] = useState();
 
   useEffect(() => {
     if (error) {
+      console.log(error)
       toast.error(error);
     }
     if (success) {
@@ -32,37 +33,37 @@ const CreateProduct = () => {
     }
   }, [dispatch, error, success]);
 
-  const handleImageChange = (e) => {
-    const files = Array.from(e.target.files);
+    // const handleImageChange = (e) => {
+    //   const files = Array.from(e.target.files);
 
-    setImages([]);
+    //   setImages([]);
 
-    files.forEach((file) => {
-      const reader = new FileReader();
+    //   files.forEach((file) => {
+    //     const reader = new FileReader();
 
-      reader.onload = () => {
-        if (reader.readyState === 2) {
-          setImages((old) => [...old, reader.result]);
-        }
-      };
-      reader.readAsDataURL(file);
-    });
-  };
+    //     reader.onload = () => {
+    //       if (reader.readyState === 2) {
+    //         setImages((old) => [...old, reader.result]);
+    //       }
+    //     };
+    //     reader.readAsDataURL(file);
+    //   });
+    // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const newForm = new FormData();
 
-    images.forEach((image) => {
-      newForm.set("images", image);
-    });
+    // images.forEach((image) => {
+    //   newForm.set("images", image);
+    // });
     newForm.append("name", name);
     newForm.append("description", description);
     newForm.append("category", category);
-    newForm.append("tags", tags);
-    newForm.append("originalPrice", originalPrice);
-    newForm.append("discountPrice", discountPrice);
+    // newForm.append("tags", tags);
+    // newForm.append("originalPrice", originalPrice);
+    // newForm.append("discountPrice", discountPrice);
     newForm.append("stock", stock);
     newForm.append("shopId", seller._id);
     dispatch(
@@ -70,12 +71,12 @@ const CreateProduct = () => {
         name,
         description,
         category,
-        // tags,
-        // originalPrice,
-        // discountPrice,
+        tags,
+        originalPrice,
+        discountPrice,
         stock,
         shopId: seller._id,
-        // images,
+        images,
       })
     );
   };

@@ -146,7 +146,7 @@ const Header = ({ activeHeading }) => {
           </div>
 
           <div className="flex">
-            <div className={`${styles.noramlFlex}`}>
+            {/* <div className={`${styles.noramlFlex}`}>
               <div
                 className="relative cursor-pointer mr-[15px]"
                 onClick={() => setOpenWishlist(true)}
@@ -156,9 +156,9 @@ const Header = ({ activeHeading }) => {
                   {wishlist && wishlist.length}
                 </span>
               </div>
-            </div>
+            </div> */}
 
-            <div className={`${styles.noramlFlex}`}>
+            {/* <div className={`${styles.noramlFlex}`}>
               <div
                 className="relative cursor-pointer mr-[15px]"
                 onClick={() => setOpenCart(true)}
@@ -171,7 +171,7 @@ const Header = ({ activeHeading }) => {
                   {cart && cart.length}
                 </span>
               </div>
-            </div>
+            </div> */}
 
             <div className={`${styles.noramlFlex}`}>
               <div className="relative cursor-pointer mr-[15px]">

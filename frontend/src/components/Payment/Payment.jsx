@@ -154,29 +154,31 @@ var id;
     }
   };
 
-  const cashOnDeliveryHandler = async (e) => {
-    e.preventDefault();
+  const cashOnDeliveryHandler = () => {
+    navigate("/order/success");
+      toast.success("Joined successfully!");
+    // e.preventDefault();
 
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
+    // const config = {
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // };
 
-    order.paymentInfo = {
-      type: "Cash On Delivery",
-    };
+    // order.paymentInfo = {
+    //   type: "Cash On Delivery",
+    // };
 
-    await axios
-    .post(`${server}/order/create-order`, order, config)
-    .then((res) => {
-      setOpen(false);
-      navigate("/order/success");
-      toast.success("Order successful!");
-      localStorage.setItem("cartItems", JSON.stringify([]));
-      localStorage.setItem("latestOrder", JSON.stringify([]));
-      window.location.reload();
-    });
+    // await axios
+    // // .post(`${server}/order/create-order`, order, config)
+    // .then((res) => {
+    //   setOpen(false);
+    //   navigate("/order/success");
+    //   toast.success("Order successful!");
+    //   localStorage.setItem("cartItems", JSON.stringify([]));
+    //   localStorage.setItem("latestOrder", JSON.stringify([]));
+    //   window.location.reload();
+    // });
   };
 
   return (
@@ -215,7 +217,7 @@ const PaymentInfo = ({
   return (
     <div className="w-full 800px:w-[95%] bg-[#fff] rounded-md p-5 pb-8">
       {/* select buttons */}
-      <div>
+      {/* <div>
         <div className="flex w-full pb-5 border-b mb-2">
           <div
             className="w-[25px] h-[25px] rounded-full bg-transparent border-[3px] border-[#1d1a1ab4] relative flex items-center justify-center"
@@ -231,7 +233,7 @@ const PaymentInfo = ({
         </div>
 
         {/* pay with card */}
-        {select === 1 ? (
+        {/* {select === 1 ? (
           <div className="w-full flex border-b">
             <form className="w-full" onSubmit={paymentHandler}>
               <div className="w-full flex pb-3">
@@ -322,10 +324,10 @@ const PaymentInfo = ({
             </form>
           </div>
         ) : null}
-      </div>
+      </div> */} 
 
-      <br />
-      {/* paypal payment */}
+      {/* <br /> */}
+      {/* paypal payment
       <div>
         <div className="flex w-full pb-5 border-b mb-2">
           <div
@@ -341,7 +343,7 @@ const PaymentInfo = ({
           </h4>
         </div>
 
-        {/* pay with payement */}
+        pay with payement
         {select === 2 ? (
           <div className="w-full flex border-b">
             <div
@@ -379,7 +381,7 @@ const PaymentInfo = ({
         ) : null}
       </div>
 
-      <br />
+      <br /> */}
       {/* cash on delivery */}
       <div>
         <div className="flex w-full pb-5 border-b mb-2">
@@ -392,7 +394,7 @@ const PaymentInfo = ({
             ) : null}
           </div>
           <h4 className="text-[18px] pl-2 font-[600] text-[#000000b1]">
-            Cash on Delivery
+            Arena ID: #0120dbEf
           </h4>
         </div>
 
@@ -417,7 +419,7 @@ const CartData = ({ orderData }) => {
   const shipping = orderData?.shipping?.toFixed(2);
   return (
     <div className="w-full bg-[#fff] rounded-md p-5 pb-8">
-      <div className="flex justify-between">
+      {/* <div className="flex justify-between">
         <h3 className="text-[16px] font-[400] text-[#000000a4]">subtotal:</h3>
         <h5 className="text-[18px] font-[600]">${orderData?.subTotalPrice}</h5>
       </div>
@@ -434,7 +436,7 @@ const CartData = ({ orderData }) => {
       <h5 className="text-[18px] font-[600] text-end pt-3">
         ${orderData?.totalPrice}
       </h5>
-      <br />
+      <br /> */}
     </div>
   );
 };

@@ -130,7 +130,7 @@ const ProfileContent = ({ active }) => {
 
               <div className="w-full 800px:flex block pb-3">
                 <div className=" w-[100%] 800px:w-[50%]">
-                  <label className="block pb-2">Ratings</label>
+                  <label className="block pb-2">Rating</label>
                   <input
                     type="number"
                     className={`${styles.input} !w-[95%] mb-4 800px:mb-0`}
@@ -210,22 +210,22 @@ const AllOrders = () => {
   }, []);
 
   const columns = [
-    { field: "id", headerName: "Order ID", minWidth: 150, flex: 0.7 },
+    { field: "id", headerName: "Tournament ID", minWidth: 150, flex: 0.7 },
 
-    {
-      field: "status",
-      headerName: "Status",
-      minWidth: 130,
-      flex: 0.7,
-      cellClassName: (params) => {
-        return params.getValue(params.id, "status") === "Delivered"
-          ? "greenColor"
-          : "redColor";
-      },
-    },
+    // {
+    //   field: "status",
+    //   headerName: "Status",
+    //   minWidth: 130,
+    //   flex: 0.7,
+    //   cellClassName: (params) => {
+    //     return params.getValue(params.id, "status") === "Delivered"
+    //       ? "greenColor"
+    //       : "redColor";
+    //   },
+    // },
     {
       field: "itemsQty",
-      headerName: "Items Qty",
+      headerName: "Joining time",
       type: "number",
       minWidth: 130,
       flex: 0.7,
@@ -233,7 +233,7 @@ const AllOrders = () => {
 
     {
       field: "total",
-      headerName: "Total",
+      headerName: "Joining date",
       type: "number",
       minWidth: 130,
       flex: 0.8,
@@ -266,9 +266,9 @@ const AllOrders = () => {
     orders.forEach((item) => {
       row.push({
         id: item._id,
-        itemsQty: item.cart.length,
-        total: "US$ " + item.totalPrice,
-        status: item.status,
+        itemsQty: new Date(item.createdAt).toLocaleTimeString(),
+        total: new Date(item.createdAt).toLocaleDateString(),
+        // status: item.status,
       });
     });
 

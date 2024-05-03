@@ -61,6 +61,9 @@ import { server } from "./server";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import StartButton from "./pages/startgameBtn.jsx";
+import ParingMode from './pages/PairingMode.js';
+import SwitchLabels from './pages/Demo.js';
+import SwitchLabel from './pages/Demo1.js';
 
 const App = () => {
   const [stripeApikey, setStripeApiKey] = useState("");
@@ -119,6 +122,9 @@ const App = () => {
           }
         />
         <Route path="/order/success" element={<OrderSuccessPage />} />
+        <Route path="/pairing-game" element={<ParingMode />} />
+        <Route path="/Manualmode" element={<SwitchLabel />} />
+        <Route path="/Automode" element={<SwitchLabels />} />
         <Route
           path="/profile"
           element={

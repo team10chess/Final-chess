@@ -23,7 +23,7 @@ const Success = () => {
 
   const handleClick=()=>{
     setTimeout(()=>{
-      navigate('/')
+      navigate('/pairing-game')
     }, 5000)
   }
 

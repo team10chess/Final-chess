@@ -67,8 +67,8 @@ const UserOrderDetails = () => {
     <div className={`py-4 min-h-screen ${styles.section}`}>
       <div className="w-full flex items-center justify-between">
         <div className="flex items-center">
-          <BsFillBagFill size={30} color="crimson" />
-          <h1 className="pl-2 text-[25px]">Order Details</h1>
+          {/* <BsFillBagFill size={30} color="crimson" /> */}
+          <h1 className="pl-2 text-[25px]">Tournament Details</h1>
         </div>
       </div>
 
@@ -95,9 +95,9 @@ const UserOrderDetails = () => {
             />
             <div className="w-full">
               <h5 className="pl-3 text-[20px]">{item.name}</h5>
-              <h5 className="pl-3 text-[20px] text-[#00000091]">
+              {/* <h5 className="pl-3 text-[20px] text-[#00000091]">
                 US${item.discountPrice} x {item.qty}
-              </h5>
+              </h5> */}
             </div>
             {!item.isReviewed && data?.status === "Delivered" ?  <div
                 className={`${styles.button} text-[#fff]`}
@@ -198,15 +198,15 @@ const UserOrderDetails = () => {
       )}
 
       <div className="border-t w-full text-right">
-        <h5 className="pt-3 text-[18px]">
+        {/* <h5 className="pt-3 text-[18px]">
           Total Price: <strong>US${data?.totalPrice}</strong>
-        </h5>
+        </h5> */}
       </div>
       <br />
       <br />
       <div className="w-full 800px:flex items-center">
         <div className="w-full 800px:w-[60%]">
-          <h4 className="pt-3 text-[20px] font-[600]">Shipping Address:</h4>
+          <h4 className="pt-3 text-[20px] font-[600]">Game link</h4>
           <h4 className="pt-3 text-[20px]">
             {data?.shippingAddress.address1 +
               " " +
@@ -217,11 +217,11 @@ const UserOrderDetails = () => {
           <h4 className=" text-[20px]">{data?.user?.phoneNumber}</h4>
         </div>
         <div className="w-full 800px:w-[40%]">
-          <h4 className="pt-3 text-[20px]">Payment Info:</h4>
+          {/* <h4 className="pt-3 text-[20px]">Payment Info:</h4>
           <h4>
             Status:{" "}
             {data?.paymentInfo?.status ? data?.paymentInfo?.status : "Not Paid"}
-          </h4>
+          </h4> */}
           <br />
            {
             data?.status === "Delivered" && (
